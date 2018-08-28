@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decora - Каталог мебели</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="../favicon.ico" rel="icon" type="image/x-icon">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/jquery.bxslider.css" rel="stylesheet">
+    <link href="../css/main_big.css" rel="stylesheet" type="text/css">
+    <link href="../css/catalog_big.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link href="../css/main_media.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+
+    <script src="../js/jquery.bxslider.js"></script>
+
+    <script src="../js/acordeon.js"></script>
+
+</head>
+<body>
+<div class="main_container">
+    <div class="header">
+        <div class="composite_menu_div">
+            <div class="logo_img">
+                <img src="../img/logo.png" width="200">
+            </div>
+            <ul class="menu-main">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="#" class="current">Каталог</a></li>
+                <li><a href="dostavka.html">Доставка</a></li>
+                <li><a href="shops.html">Магазины</a></li>
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="catalog_container">
+        <h2>Каталог</h2>
+        <ol class="breadcrumb">
+            <li><a href="#">Главная</a></li>
+            <li class="active">Каталог</li>
+        </ol>
+    </div>
+    <div class="main_catalog">
+        <div class="left_menu">
+            <div class="categories">
+                <ul id="menu">
+                    <li><a href=""><i class="fa fa-chevron-down" aria-hidden="true"></i>Кухни</a>
+                        <ul>
+                            <li><a href="#">Беатрис</a></li>
+                            <li><a href="#">Флоренция</a></li>
+                            <li><a href="#">Николь</a></li>
+                            <li><a href="#">Доминика</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-chevron-down" aria-hidden="true"></i>Обеденные группы</a>
+                        <ul>
+                            <li><a href="#">Классический стиль</a></li>
+                            <li><a href="#">Современный стиль</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-chevron-down" aria-hidden="true"></i>Гостиные</a>
+                        <ul>
+                            <li><a href="#">Беатрис</a></li>
+                            <li><a href="#">Флоренция</a></li>
+                            <li><a href="#">Верона</a></li>
+                            <li><a href="#">Цезарь</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-chevron-down" aria-hidden="true"></i>Спальни</a>
+                        <ul>
+                            <li><a href="#">Грация</a></li>
+                            <li><a href="#">Милано</a></li>
+                            <li><a href="#">Валенсия</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-chevron-down" aria-hidden="true"></i>Библиотеки</a>
+                        <ul>
+                            <li><a href="#">Фелиант</a></li>
+                            <li><a href="#">Современный стиль</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-chevron-down" aria-hidden="true"></i>Прихожие</a>
+                        <ul>
+                            <li><a href="#">Классический стиль</a></li>
+                            <li><a href="#">Современный стиль</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <form>
+                <h3>Цвет</h3>
+                <div class="color_filter">
+                    <input type="checkbox" id="white" name="color">
+                    <label for="white"></label>
+                    <input type="checkbox" id="red" name="color">
+                    <label for="red"></label>
+                    <input type="checkbox" id="brown" name="color">
+                    <label for="brown"></label>
+                    <input type="checkbox" id="beige" name="color">
+                    <label for="beige"></label>
+                    <input type="checkbox" id="black" name="color">
+                    <label for="black"></label>
+                    <input type="checkbox" id="gray" name="color">
+                    <label for="gray"></label>
+                    <input type="checkbox" id="light_brown" name="color">
+                    <label for="light_brown"></label>
+                </div>
+                <h3>Цена</h3>
+                <div class="price_filter">
+                    <div><label for="from">От:</label>
+                        <input type="text" id="from" placeholder="60"></div>
+                    <div><label for="to">До:</label>
+                        <input type="text" id="to" placeholder="7500"></div>
+                </div>
+                <button type="submit">Фильтровать</button>
+            </form>
+        </div>
+        <div class="flex_catalog_list">
+            <div class="showing_information">
+                <p>Показано 1-3 из 8</p>
+                <div class="catalog_sort">
+                    <select>
+                        <option disabled selected>Сортировать по...</option>
+                        <option>Сначала дешевле</option>
+                        <option>Сначала дороже</option>
+                        <option>Сначала популярные</option>
+                        <option>По рейтингу</option>
+                    </select>
+                </div>
+            </div>
+            <div class="catalog_list">
+                <div class="furniture">
+                    <div class="img_div">
+                        <a class="test-popup-link" href="../img/katalog/kitchen.jpg"><img
+                                src="../img/katalog/kitchen.jpg"></a>
+                    </div>
+                    <div class="furniture_info">
+                        <h3>Категория: Кухни</h3>
+                        <h2>Николь</h2>
+                        <h3>Цена: от 3000 р.</h3>
+                        <img src="../img/stars.png">
+                        <h3>Кухни в современном стиле &mdash; это функциональность, эргономичность, точность деталей,
+                            идеальные пропорции и минимализм. Вы видите в кухне «Николь» натуральную древесину, элементы
+                            из металла, прозрачное и матовое стекло. И это сочетание впечатляет. </h3>
+                        <button><i></i>Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="furniture">
+                    <div class="img_div">
+                        <a class="test-popup-link1" href="../img/katalog/bedroom.jpg"><img
+                                src="../img/katalog/bedroom.jpg"></a>
+                    </div>
+                    <div class="furniture_info">
+                        <h3>Категория: Спальни</h3>
+                        <h2>Милано</h2>
+                        <h3>Цена: от 2950 р.</h3>
+                        <img src="../img/stars.png">
+                        <h3>Спальня "Милано" &mdash; это прямые линии, естественная грация материала и продуманные
+                            детали. Вся
+                            безупречность и богатство простоты в этом дизайнерском решении.
+
+                            Простая, стильная, практичная и функциональная &mdash; спальня в современном стиле из
+                            массива
+                            полностью отвечает всем Вашим потребностям. Большая удобная кровать позволит Вам насладиться
+                            каждой минутой отдыха, компактная прикроватная тумба вместит все важные мелочи, а просторный
+                            шкаф превратится в полноценную гардеробную!
+
+                            Вы &mdash; поклонник современного стиля с присущей ему лаконичностью? Знакомьтесь &mdash;
+                            атмосферная
+                            спальня «Милано», которая гармонично дополнит интерьеры в стиле лофт, хай&ndash;тек и
+                            минимализм.</h3>
+                        <button><i></i>Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="furniture">
+                    <div class="img_div">
+                        <a class="test-popup-link2" href="../img/katalog/library.jpg"><img
+                                src="../img/katalog/library.jpg"></a>
+                    </div>
+                    <div class="furniture_info">
+                        <h3>Категория: Библиотеки</h3>
+                        <h2>Фолиант</h2>
+                        <h3>Цена: от 2100 р.</h3>
+                        <img src="../img/stars.png">
+                        <h3>Отличительная особенность мебели для библиотек и кабинетов &mdash; представительный внешний
+                            вид и
+                            достойный деловой интерьер. Читайте, играйте в шахматы, размышляйте или общайтесь. Причем с
+                            удовольствием.</h3>
+                        <button><i></i>Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="slider">
+    <ul class="bxslider_1">
+        <li><img src="../img/slider/030cf1fd-931e-49b1-aa85-37f486bdf3c0.A2sIQ.jpg" alt="Ваниль с кремовой патиной"
+                 title="Ваниль с кремовой патиной"/></li>
+        <li><img src="../img/slider/4818dc83-6f14-4779-b47e-193c87dca996.bBjl4.jpg" alt="Элегантная Беатрис"
+                 title="Элегантная Беатрис"/></li>
+        <li><img src="../img/slider/9918b70b-3d62-4280-a410-2b2e7b43ae17.WjQcL.jpg" alt="Грация" title="Грация"/></li>
+        <li><img src="../img/slider/d9e5d65f-3574-4d2f-b867-503873ea5fd7.VEbY9.jpg" alt="Современный стиль"
+                 title="Современный стиль"/></li>
+    </ul>
+    .
+</div>
+<div class="footer">
+    <div class="information">
+        <h2>Информация</h2>
+        <a href="#">Калькулятор кухни</a>
+        <a href="#">Калькулятор шкафа-купе</a>
+        <a href="#">Как сделать заказ</a>
+        <a href="#">Оплата и доставка</a>
+        <a href="#">Магазины</a>
+        <a href="#">Реквизиты</a>
+    </div>
+    <div class="support">
+        <h2>Служба поддержки</h2>
+        <a href="#">Связаться с нами</a>
+    </div>
+    <div class="e-mail-subscribe">
+        <div class="subscribe">
+            <div class="subscribe-header">
+                <img src="../img/send.png" width="80">
+                <div>
+                    <h4>Подписывайтесь!</h4>
+                    <p>Узнавайте свежую информацию о скидках и акциях первым.</p>
+                </div>
+            </div>
+            <form>
+                <input type="email" placeholder="Оставьте свой e-mail" id="e-mail-input">
+                <button type="submit">Подписаться</button>
+            </form>
+        </div>
+        <div class="cards">
+            <img src="../img/cards/visa.png" width="70">
+            <img src="../img/cards/MasterCard.png" width="70">
+            <img src="../img/cards/belkart.jpg" width="70">
+            <img src="../img/cards/halva.png" width="70">
+        </div>
+    </div>
+</div>
+</body>
+</html>

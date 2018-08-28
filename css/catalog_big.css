@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+.header {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
+    background: white;
+}
+
+.composite_menu_div {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
+    top: 0;
+    opacity: 0.9;
+    z-index: 3;
+}
+
+.catalog_container {
+    padding: 20px 25px;
+    max-width: 100%;
+    background-color: #F4F1F3;
+}
+
+.catalog_container h2 {
+    font-family: "Playfair Display", serif;
+    color: #182739;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: .1em;
+    padding: 0 15px;
+    text-align: left;
+    display: inline-block;
+}
+
+.catalog_container .breadcrumb > li + li:before {
+    color: #cccccc;
+    content: "/";
+    padding: 0 5px;
+}
+
+.catalog_container .breadcrumb li {
+    display: inline-block;
+}
+
+.catalog_container .breadcrumb {
+    padding: 10px 15px;
+    display: inline-block;
+    float: right;
+    font-family: Vollkorn, serif;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: #7a7a7a;
+    font-weight: 400;
+    background-color: #F4F1F3;
+
+}
+
+.main_catalog {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    align-items: flex-start;
+    padding-right: 20px;
+}
+
+.main_catalog .left_menu {
+    display: flex;
+    flex-basis: 30%;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.main_catalog .left_menu .categories {
+    flex-basis: 100%;
+}
+
+ul#menu, ul#menu ul {
+    list-style-type: none;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+ul#menu a {
+    display: block;
+    text-decoration: none;
+}
+
+ul#menu li {
+    margin-top: 1px;
+}
+
+ul#menu li a i {
+    vertical-align: middle;
+    padding: 0 10px 5px 0;
+}
+
+ul#menu li a, .furniture_info h3, .flex_catalog_list .showing_information p {
+    background: white;
+    color: #757b87;
+    padding: 12px;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    transition: 0.1s;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+ul#menu li ul li a {
+    background: #F6F6F6;
+    color: #333;
+    padding-left: 20px;
+}
+
+ul#menu li ul li a:hover {
+    background: #EDEDED;
+    padding-left: 25px;
+}
+
+.main_catalog .left_menu .color_filter {
+    flex-basis: 100%;
+    margin-top: 20px;
+    padding-right: 25px;
+}
+
+.main_catalog .left_menu .color_filter label {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    z-index: 20;
+}
+
+.main_catalog .left_menu .color_filter label:nth-child(2) {
+    background-color: white;
+    border: 1px solid #BEBEBE;
+}
+
+.main_catalog .left_menu .color_filter label:nth-child(4) {
+    background-color: red;
+}
+
+.main_catalog .left_menu .color_filter label:nth-child(6) {
+    background-color: brown;
+}
+
+.main_catalog .left_menu .color_filter label:nth-child(8) {
+    background-color: #d6d8d9;
+}
+
+.main_catalog .left_menu .color_filter label:nth-child(10) {
+    background-color: black;
+}
+
+.main_catalog .left_menu .color_filter label:nth-child(12) {
+    background-color: gray;
+}
+
+.main_catalog .left_menu .color_filter label:nth-child(14) {
+    background-color: sandybrown;
+    margin-right: 0;
+}
+
+.main_catalog .left_menu .color_filter input {
+    position: absolute;
+    visibility: hidden;
+}
+
+.main_catalog .left_menu .price_filter div label {
+    display: inline-block;
+    padding-left: 0;
+
+}
+
+.main_catalog .left_menu .price_filter div input {
+    width: 100px;
+}
+
+.main_catalog .left_menu button {
+    display: block;
+    margin: 40px auto;
+}
+
+.main_catalog .left_menu .color_filter input:checked + label {
+    border: 4px solid yellowgreen;
+
+}
+
+.main_catalog .left_menu form h3 {
+    margin-left: 12px;
+}
+
+.main_catalog .left_menu .price_filter {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main_catalog .left_menu .price_filter div:nth-child(1) {
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.main_catalog .flex_catalog_list {
+    display: flex;
+    flex-basis: 70%;
+    flex-direction: column;
+}
+
+.main_catalog .flex_catalog_list .catalog_list {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+}
+
+.main_catalog .flex_catalog_list .catalog_list .furniture {
+    display: flex;
+    flex-basis: 100%;
+    margin-bottom: 20px;
+}
+
+.furniture .img_div {
+    flex-basis: 40%;
+    width: 40%;
+    max-width: 40%;
+    padding: 15px;
+}
+
+.main_catalog .flex_catalog_list .catalog_list .furniture .img_div img {
+    width: 100%;
+}
+
+.furniture .furniture_info {
+    flex-basis: 60%;
+    margin: 12px;
+}
+
+.furniture_info button i {
+    content: url("../img/shopping-cart.png");
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+.catalog_list .furniture .furniture_info h2, .flex_map_information .delivery_information h2, .flex_shop_address .shop_address h2, .flex_shop_address .shop_address h3, .flex_shop_address .shop_address p, .about_us h2, .about_us p, .contact_form h2, .contact_form p, .contact_form h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.furniture_info h3, .flex_catalog_list .showing_information p, .flex_catalog_list .showing_information .catalog_sort select option, .flex_catalog_list .showing_information .catalog_sort select, .flex_map_information .delivery_information p, .flex_map_information .delivery_information li, .flex_shop_address .shop_address h3, .flex_shop_address .shop_address p strong, .about_us p, .contact_form p, .contact_form h3 {
+    padding: 15px 0 15px 0;
+    margin: 0;
+    color: #4B4E56;
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: .1em;
+    text-align: justify;
+}
+
+.furniture_info h3:first-of-type {
+    padding-top: 0px;
+}
+
+.flex_catalog_list .showing_information {
+    display: block;
+    padding: 15px 0 15px 15px;
+}
+
+.flex_catalog_list .showing_information p {
+    display: inline-block;
+}
+
+.flex_catalog_list .showing_information .catalog_sort {
+    display: inline-block;
+    float: right;
+}
+
+.flex_catalog_list .showing_information .catalog_sort select {
+    padding: 7px 0 7px 7px;
+    margin-top: 5px;
+}
+
+.slider {
+    width: 100%;
+    max-width: 100%;
+}
+
+.bx-wrapper {
+    margin: 20px auto;
+}
+
+.flex_map_information {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 10px 5px 10px;
+}
+
+#map, .flex_map_information .delivery_information {
+    flex-basis: 50%;
+    width: 50%;
+    max-width: 50%;
+    height: 600px;
+}
+
+.flex_map_information .delivery_information {
+    background: url("../img/delivery_bg.jpg") 50% no-repeat;
+    padding: 50px 20px 20px 50px;
+    color: white;
+    height: auto;
+    min-height: 600px;
+}
+
+.flex_map_information .delivery_information h2, .flex_map_information .delivery_information p, .flex_map_information .delivery_information li {
+    color: white;
+}
+
+.flex_shop_address {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    /*align-items: stretch;*/
+    margin: 0 30px;
+}
+
+.flex_shop_address .shop_address {
+    flex-basis: 25%;
+    margin: 30px 7px 15px 30px;
+    padding: 20px 30px 20px 30px;
+    border: 1px solid gray;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.flex_shop_address .shop_address h2 {
+    padding-bottom: 10px;
+}
+
+.flex_shop_address .shop_address h3 {
+    clear: both;
+}
+
+.flex_shop_address .shop_address p strong {
+    float: left;
+    display: block;
+    font-weight: bold;
+    padding: 0;
+}
+
+.about_us {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 30px 40px;
+}
+
+.about_us h2 {
+    padding: 20px 0 20px 30px;
+}
+
+.about_us p {
+    padding: 8px 0;
+}
+
+.flex_contact_us {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-around;
+    margin: 60px 0;
+}
+
+.contact_form, .contact_image {
+    flex-basis: 35%;
+    max-width: 35%;
+    margin-right: 30px;
+}
+
+.contact_image img {
+    width: 100%;
+}
+
+.contact_form form {
+    margin: 0 auto;
+}
+
+.contact_form form input, .contact_form form textarea {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    border: none;
+    background-color: #EDEDEE;
+}
+
+.contact_form form button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.contact_form form textarea {
+    height: 90px;
+}
+
+.contact_form h2, .contact_form h3, .contact_form p {
+    text-align: center;
+}

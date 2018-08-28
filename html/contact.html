@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decora - Контакты, обратная связь</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="../favicon.ico" rel="icon" type="image/x-icon">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/main_big.css" rel="stylesheet" type="text/css">
+    <link href="../css/catalog_big.css" rel="stylesheet" type="text/css">
+    <link href="../css/main_media.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.maskedinput.min.js"></script>
+</head>
+<body>
+<div class="main_container">
+    <div class="header">
+        <div class="composite_menu_div">
+            <div class="logo_img">
+                <img src="../img/logo.png" width="200">
+            </div>
+            <ul class="menu-main">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="dostavka.html">Доставка</a></li>
+                <li><a href="shops.html">Магазины</a></li>
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="#" class="current">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="catalog_container">
+        <h2>Обратная связь</h2>
+        <ol class="breadcrumb">
+            <li><a href="#">Главная</a></li>
+            <li class="active">Контакты</li>
+        </ol>
+    </div>
+</div>
+
+<div class="flex_contact_us">
+    <div class="contact_form">
+        <h2>Обратная связь</h2>
+        <h3>Телефон: +375 (29) 123 4567</h3>
+        <h3>Email: decora@demolink.org</h3>
+        <p>Cвяжитесь с нами, чтобы купить мебель на заказ!</p>
+        <form>
+            <input type="text" placeholder="Ваше имя">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Ваш город">
+            <input type="text" placeholder="Ваш телефон" id="phone">
+            <textarea placeholder="Опишите ваши пожелания, касающиеся вашего заказа...">            </textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+    <div class="contact_image">
+        <img src="../img/contact_img.jpg">
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="information">
+        <h2>Информация</h2>
+        <a href="#">Калькулятор кухни</a>
+        <a href="#">Калькулятор шкафа-купе</a>
+        <a href="#">Как сделать заказ</a>
+        <a href="#">Оплата и доставка</a>
+        <a href="#">Магазины</a>
+        <a href="#">Реквизиты</a>
+    </div>
+    <div class="support">
+        <h2>Служба поддержки</h2>
+        <a href="#">Связаться с нами</a>
+    </div>
+    <div class="e-mail-subscribe">
+        <div class="subscribe">
+            <div class="subscribe-header">
+                <img src="../img/send.png" width="80">
+                <div>
+                    <h4>Подписывайтесь!</h4>
+                    <p>Узнавайте свежую информацию о скидках и акциях первым.</p>
+                </div>
+            </div>
+            <form>
+                <input type="email" placeholder="Оставьте свой e-mail" id="e-mail-input">
+                <button type="submit">Подписаться</button>
+            </form>
+        </div>
+        <div class="cards">
+            <img src="../img/cards/visa.png" width="70">
+            <img src="../img/cards/MasterCard.png" width="70">
+            <img src="../img/cards/belkart.jpg" width="70">
+            <img src="../img/cards/halva.png" width="70">
+        </div>
+    </div>
+</div>
+<script>
+    $("#phone").mask("+375(99) 999-99-99");
+</script>
+</body>
+</html>

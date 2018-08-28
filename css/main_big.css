@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Vollkorn:400,400i,600,600i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,latin-ext,vietnamese');
+
+#toTop {
+    width: 100px;
+    border: 1px solid #ccc;
+    background: #f7f7f7;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 10px; /* отступ кнопки от нижнего края страницы*/
+    right: 10px;
+    cursor: pointer;
+    display: none;
+    color: #333;
+    font-family: verdana;
+    font-size: 11px;
+}
+
+@keyframes scale_gallery {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+body {
+    max-width: 1460px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    background: url("../img/header.jpg") 50% no-repeat;
+    height: 600px;
+    background-size: cover;
+}
+
+.composite_menu_div {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    top: 50px;
+    opacity: 0.9;
+    z-index: 3;
+}
+
+.composite_menu_div ul {
+    position: absolute;
+    display: inline-block;
+    right: 3%;
+    top: 40px;
+}
+
+.logo_img {
+    display: inline-block;
+    position: absolute;
+    left: 5%;
+}
+
+.menu-main {
+    list-style: none;
+    text-align: center;
+}
+
+.menu-main li {
+    display: inline-block;
+}
+
+.menu-main li:after {
+    content: "|";
+    color: #606060;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menu-main li:last-child:after {
+    content: none;
+}
+
+.menu-main a {
+    text-decoration: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 15px;
+    margin: 0 24px 0 22px;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+}
+
+.menu-main a, .menu-main a:visited {
+    color: black;
+}
+
+.menu-main a.current, .menu-main a:hover {
+    color: #feb386;
+}
+
+.menu-main a:before,
+.menu-main a:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    left: 50%;
+    background: #feb386;
+    transition: .8s;
+}
+
+.menu-main a:hover:before, .menu-main .current:before {
+    left: 0;
+}
+
+.menu-main a:hover:after, .menu-main .current:after {
+    right: 0;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.plus {
+    background-color: white;
+    flex-basis: 100%;
+    padding: 40px 15px;
+}
+
+p, h2, hr {
+    text-align: center;
+}
+
+hr {
+    color: #858e9a;
+}
+
+.plus + p {
+    font-family: Vollkorn, serif;
+    color: #7a7a7a;
+    font-style: oblique;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding: 0 0;
+}
+
+.plus h2 {
+    font-family: "Playfair Display", serif;
+    color: #182739;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding: 5px 0 30px 0;
+}
+
+.plus p {
+    font-family: Vollkorn, serif;
+    color: #616161;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding: 0 80px;
+}
+
+.plus hr {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    background: url("../img/gallery_bg.png") 50% no-repeat;
+    background-size: cover;
+    flex-basis: 100%;
+    padding: 40px 15px;
+}
+
+.gallery h2, .recommendation h2, .sale h2 {
+    font-family: "Playfair Display", serif;
+    color: #182739;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding: 10px 0 50px 0;
+}
+
+.photo_gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.photo_gallery div {
+    margin-bottom: 40px;
+    flex-basis: 30%;
+    width: 30%;
+    max-width: 30%;
+}
+
+.photo_gallery div img {
+    opacity: 0.8;
+    width: 100%;
+}
+
+.photo_gallery div img:hover {
+    animation-duration: 1s;
+    animation-name: scale_gallery;
+}
+
+.recommendation {
+    background-color: white;
+    flex-basis: 100%;
+    padding-left: 3.4%;
+    padding-right: 3.4%;
+    padding-bottom: 30px;
+}
+
+.flex_recommendation {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.recommendation-1, .recommendation-2, .recommendation-3 {
+    flex-basis: 31%;
+    position: relative;
+}
+
+.recommendation h2 {
+    text-align: center;
+    padding-top: 35px;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.recommendation-1 .circle {
+    background: url("../img/recommendation/face_1.jpg");
+}
+
+.recommendation-2 .circle {
+    background: url("../img/recommendation/face_2.jpg");
+}
+
+.recommendation-3 .circle {
+    background: url("../img/recommendation/face_3.jpg");
+}
+
+.customer-recommendation p {
+    padding: 30px 15px;
+    text-align: center;
+    font-family: Vollkorn, serif;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-style: italic;
+    color: #7a7a7a;
+    font-weight: 400;
+    padding-bottom: 40px;
+}
+
+.customer-name {
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.5;
+    letter-spacing: 0px;
+    color: #182739;
+    text-align: center;
+    width: 100%;
+
+}
+
+.sale {
+    background-color: #e9e5e7;
+    flex-basis: 100%;
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+
+.sale .flex-sale {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.sale .flex-sale div {
+    flex-basis: 21.5%;
+    height: 240px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.sale .flex-sale div .overlay {
+    position: absolute;
+    width: 100%;
+    height: 240px;
+    bottom: -20px;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.sale .flex-sale div .overlay p, .sale .flex-sale div .overlay h2, .sale .flex-sale div .overlay button {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.sale .flex-sale div .overlay h2 {
+    font-size: 24px;
+    padding: 15px 0 15px 10px;
+    text-align: left;
+}
+
+.sale .flex-sale div .overlay p {
+    display: inline-block;
+    color: #ff6600;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.sale .flex-sale div .overlay p:last-of-type {
+    padding-right: 0;
+}
+
+.sale .flex-sale div .overlay .old-price {
+    text-decoration: line-through;
+    color: white;
+    font-size: 20px;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.sale .flex-sale div .overlay button {
+    background: rgba(0, 0, 0, 0.7);
+    border: 3px double white;
+    display: block;
+    margin: 20px auto;
+    outline: none;
+    padding: 15px 40px;
+    cursor: pointer;
+}
+
+.sale .flex-sale div:hover .overlay {
+    display: block;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: stretch;
+    background: url("../img/footer_bg.jpg") 50% no-repeat;
+}
+
+.footer h2, .main_catalog .left_menu form h3, .catalog_list .furniture .furniture_info h2, .flex_map_information .delivery_information h2, .flex_shop_address .shop_address h2, .about_us h2, .contact_form h2 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    margin-left: 70px;
+    font-family: "Playfair Display", serif;
+    color: #182739;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.footer a, .main_catalog .left_menu .price_filter div label {
+    padding: 8px 0 4px 70px;
+    text-decoration: none;
+    display: block;
+    font-family: Vollkorn, serif;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-style: normal;
+    color: #7a7a7a;
+    font-weight: 400;
+}
+
+.footer a:last-child {
+    padding-bottom: 50px;
+}
+
+.footer a:hover {
+    color: black;
+}
+
+.footer .information, .footer .support {
+    flex-basis: 30%;
+}
+
+.footer .e-mail-subscribe {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .e-mail-subscribe .subscribe, .footer .e-mail-subscribe .cards {
+    flex-basis: 100%;
+}
+
+.footer .e-mail-subscribe .subscribe {
+    padding-top: 25px;
+    padding-left: 50px;
+}
+
+.footer .e-mail-subscribe .subscribe img {
+    float: left;
+}
+
+.footer .e-mail-subscribe .subscribe .subscribe-header div {
+    padding: 15px;
+    display: inline-block;
+    width: 51.3%;
+    max-width: 77%;
+}
+
+.footer .e-mail-subscribe p, .footer .e-mail-subscribe h4 {
+    display: inline-block;
+}
+
+.footer .e-mail-subscribe h4 {
+    font-family: Vollkorn, serif;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-style: normal;
+    color: black;
+    font-weight: 400;
+}
+
+.footer .e-mail-subscribe p {
+    font-family: Vollkorn, serif;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-style: italic;
+    color: #7a7a7a;
+    font-weight: 400;
+    text-align: left;
+}
+
+.footer .e-mail-subscribe .subscribe form {
+    clear: both;
+}
+
+.footer .e-mail-subscribe .subscribe form button, .footer .e-mail-subscribe .subscribe form input, .main_catalog .left_menu .price_filter input, .main_catalog .left_menu button, .flex_catalog_list button, .contact_form form input, .contact_form form button, .contact_form form textarea {
+    text-transform: uppercase;
+    font-family: Vollkorn, serif;
+    font-size: 13px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-style: normal;
+    color: black;
+    font-weight: 400;
+    padding: 10px;
+    border: 1px solid black;
+    background: white;
+}
+
+.footer .e-mail-subscribe .subscribe form input, .main_catalog .left_menu .price_filter input, .contact_form form input, .contact_form form textarea {
+    margin-left: 10px;
+    text-transform: none;
+    text-align: left;
+    outline: none;
+}
+
+.footer .e-mail-subscribe .cards {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    flex-wrap: wrap;
+}
+
+.footer .e-mail-subscribe .cards img {
+    padding-right: 10px;
+}
+
+.footer .e-mail-subscribe .cards img:last-child {
+    padding-right: 0;
+}
